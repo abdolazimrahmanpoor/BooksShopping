@@ -1,24 +1,77 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-
+import Login from "../views/Login.vue";
+import Dashboard from "../views/Dashboard.vue";
+import Books from '../views/Books.vue';
+import NewBook from '../views/NewBook.vue';
+import EditBook from '../views/EditBook.vue';
+import Orders from '../views/Orders.vue';
+import EditOrder from '../views/EditOrder.vue';
+import Customers from '../views/Customers.vue';
+import NewCustomer from '../views/NewCustomer.vue';
+import EditCustomer from '../views/EditCustomer.vue';
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    redirect: '/login',
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+    path: "/logout",
+    redirect: '/login',
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/books",
+    name: "Books",
+    component: Books,
+  },
+  {
+    path: "/new-book",
+    name: "NewBook",
+    component: NewBook,
+  },
+  {
+    path: "/edit-book",
+    name: "EditBook",
+    component: EditBook,
+  },
+  {
+    path: "/orders",
+    name: "Orders",
+    component: Orders,
+  },
+  {
+    path: "/edit-order",
+    name: "EditOrder",
+    component: EditOrder,
+  },
+  {
+    path: "/customers",
+    name: "Customers",
+    component: Customers,
+  },
+  {
+    path: "/new-customer",
+    name: "NewCustomer",
+    component: NewCustomer,
+  },
+  {
+    path: "/edit-customer",
+    name: "EditCustomer",
+    component: EditCustomer,
+  },
+  
 ];
 
 const router = new VueRouter({
