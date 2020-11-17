@@ -18,11 +18,13 @@
                       class="input"
                       placeholder="toplearn@gmail.com"
                       required
+                      :class="{'is-danger' : error.email}" v-model="form.email"
                     />
                     <span class="icon is-small is-left">
                       <i class="fa fa-envelope"></i>
                     </span>
                   </div>
+                  <p class="help is-danger" v-if="error.email">نام کاربری یافت نشد</p>
                 </div>
 
                 <div class="field">
@@ -33,6 +35,7 @@
                       class="input"
                       placeholder="********"
                       required
+                      :class="{'is-danger': error.password}" v-model="form.password"
                     />
                     <span class="icon is-small is-left">
                       <i class="fa fa-lock"></i>

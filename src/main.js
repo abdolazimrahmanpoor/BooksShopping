@@ -6,7 +6,11 @@ import 'nprogress/nprogress.css'
 import '@/assets/css/bulma-rtl.css';
 
 
-Vue.config.productionTip = false;
+
+
+
+
+
 
 new Vue({
   router,
