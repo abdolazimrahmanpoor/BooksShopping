@@ -15,21 +15,28 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    redirect: '/login',
+    redirect: { name: "Login" }
   },
   {
     path: "/logout",
-    redirect: '/login',
+    redirect: '/login'
   },
   {
     path: "/dashboard",
     name: "Dashboard",
+    component: Dashboard
+  },
+  {
+    path: "/dashboard/:username",
+    name: "Dashboard",
     component: Dashboard,
+    props: true
   },
   {
     path: "/login",
     name: "Login",
     component: Login,
+    alias: "/sign-in"
   },
   {
     path: "/books",
@@ -75,6 +82,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes
 });
 
