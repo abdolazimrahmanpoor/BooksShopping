@@ -24,7 +24,7 @@
         </div>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link">{{ $route.params.username}}</div>
+            <div class="navbar-link">a_rahmanpoor</div>
             <div class="navbar-dropdown">
               <a href="#" class="navbar-item">
                 <div>
@@ -44,14 +44,14 @@
                 </div>
               </a>
 
-              <a href="#" class="navbar-item">
+              <router-link to="/logout" class="navbar-item">
                 <div>
                   <span>خروج</span>
                   <span class="icon is-small">
                     <i class="fa fa-sign-out-alt"></i>
                   </span>
                 </div>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
             <p class="menu-label">منوی اصلی</p>
             <ul class="menu-list">
               <li>
-                <router-link :to="{ name: 'Dashboard', params: {username: 'azim.cycletourist'}}">
+                <router-link :to="{ name: 'Dashboard'}">
                   <span class="icon">
                     <i class="fas fa-digital-tachograph"></i>
                   </span>

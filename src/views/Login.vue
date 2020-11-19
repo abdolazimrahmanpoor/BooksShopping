@@ -82,13 +82,13 @@ export default {
     tryLogin(){
       this.resetErrors();
 
-      if (this.form.email !== 'azim.cycletourist@gmail.com'){ return this.error.email = true;}
-      if (this.form.password !== 'password'){ return this.error.password = true;}
+      if (this.form.email !== 'azim@gmail.com'){ return this.error.email = true;}
+      if (this.form.password !== '12345678'){ return this.error.password = true;}
         
 
       this.resetErrors();
 
-      this.$router.push('dashboard/azim.cycletourist');
+      this.$router.push('dashboard/a_rahmanpoor');
     },
     resetErrors(){
       this.error.email = false;
