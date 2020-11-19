@@ -76,8 +76,7 @@
             </div>
             </template>
 
-            <router-link href="orders.html" class="button is-link is-outlined"
-              >نمایش همه سفارشات</router-link>
+            <router-link to="/orders" class="button is-link is-outlined">نمایش همه سفارشات</router-link>
             
           </div>
         </div>
@@ -143,9 +142,10 @@
 </template>
 
 <script>
+
 export default {
   name: 'Dashboard',
-  components: { },
+  components: {},
   data(){
     return {
       customers: [
@@ -173,13 +173,13 @@ export default {
           id: 1,
           name: "کتاب راز",
           copiesSold:  146,
-          image: "/images/raz.jpg"
+          image: "images/raz.jpg"
         },
          {
           id: 2,
           name: "ملت عشق",
           copiesSold:  165,
-          image: "/images/mellat.jpg"
+          image: "images/mellat.jpg"
         }
       ],
       orders: [
@@ -219,5 +219,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

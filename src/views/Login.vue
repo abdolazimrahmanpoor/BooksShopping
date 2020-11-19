@@ -16,7 +16,7 @@
                     <input
                       type="email"
                       class="input"
-                      placeholder="toplearn@gmail.com"
+                      placeholder="yourmail@gmail.com"
                       required
                       :class="{'is-danger' : error.email}" v-model="form.email"
                     />
@@ -82,13 +82,13 @@ export default {
     tryLogin(){
       this.resetErrors();
 
-      if (this.form.email !== 'user@bulma.com'){ return this.error.email = true;}
+      if (this.form.email !== 'azim.cycletourist@gmail.com'){ return this.error.email = true;}
       if (this.form.password !== 'password'){ return this.error.password = true;}
         
 
       this.resetErrors();
 
-      this.$router.push('dashboard');
+      this.$router.push('dashboard/azim.cycletourist');
     },
     resetErrors(){
       this.error.email = false;

@@ -24,7 +24,7 @@
         </div>
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-link">a_rahmanpoor</div>
+            <div class="navbar-link">{{ $route.params.username}}</div>
             <div class="navbar-dropdown">
               <a href="#" class="navbar-item">
                 <div>
@@ -67,7 +67,7 @@
             <p class="menu-label">منوی اصلی</p>
             <ul class="menu-list">
               <li>
-                <router-link to="/dashboard">
+                <router-link :to="{ name: 'Dashboard', params: {username: 'azim.cycletourist'}}">
                   <span class="icon">
                     <i class="fas fa-digital-tachograph"></i>
                   </span>
